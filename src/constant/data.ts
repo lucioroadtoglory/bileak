@@ -4,7 +4,7 @@ const data = [
   {
     id: 333,
     subject: 'Biologia',
-    description:'Poríferos;\nCnidários;\nPlatelmintos;\nNematelmintos.',
+    description:'Prova individual sobre poríferos, cnidários, clatelmintos, nematelmintos.',
     value: 10,
     date: '07/06/2021'
   },
@@ -25,7 +25,7 @@ const data = [
   {
     id: 9953,
     subject: 'Química',
-    description:'Prova individual com 14 questões objetivas valendo 10 pontos.',
+    description:'Prova individual com 14 questões objetivas sobre funções orgânicas valendo 10 pontos.',
     value: 10,
     date: '10/06/2021'
   },
@@ -53,28 +53,28 @@ const data = [
   {
     id: 545,
     subject: 'Matéria teste',
-    description:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    description:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
     value: 10,
     date: '07/06/2021'
   },
   {
     id: 6,
     subject: 'Matéria teste',
-    description:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    description:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
     value: 10,
     date: '07/06/2021'
   },
   {
     id: 9898,
     subject: 'Matéria teste',
-    description:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    description:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
     value: 10,
     date: '07/06/2021'
   },
   {
     id: 2222,
     subject: 'Matéria teste',
-    description:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    description:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
     value: 10,
     date: '07/06/2021'
   },

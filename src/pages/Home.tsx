@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { 
   StyleSheet,
   Text,
@@ -7,14 +7,28 @@ import {
   TouchableWithoutFeedback,
   FlatList,
   Pressable,
-  Alert
+  Alert,
+  Button,
+  Dimensions,
+  Animated,
+  TouchableOpacity
 } from 'react-native';
 import fonts from '../constant/fonts';
 import Constants from 'expo-constants'
 import { Ionicons } from '@expo/vector-icons';
 import data from '../constant/data';
+import Modal from '../components/Modal'
+
+const { height } = Dimensions.get('window')
+
 const Home = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [dataModal, setDataModal] = useState({})
+
   return (
+  <TouchableWithoutFeedback onPress={() => {
+    setModalVisible(false)}}
+  >
   <SafeAreaView style={styles.container}>
     <View style={styles.header}>
       <Text style={styles.logo}>biLeak</Text>
@@ -26,11 +40,22 @@ const Home = () => {
         </View>
       </TouchableWithoutFeedback>
     </View>
+
+    <Modal 
+        show={modalVisible}
+        setShow={setModalVisible}
+        close={() => setModalVisible(false)}
+        data={dataModal}
+    />
+
     <FlatList
       data={data}
       renderItem={({item}) => (
         <Pressable style={styles.boxContainer}
-          onPress={() => Alert.alert("Sobre a prova", item.description)}
+          onPress={() => {
+            setDataModal(item)
+            setModalVisible(true)
+          }}
         >
           <View style={{justifyContent: 'space-between'}}>
             <Text style={styles.textSubject}>{item.subject}</Text>
@@ -42,6 +67,7 @@ const Home = () => {
       keyExtractor={item => item.id.toString()}
     />
   </SafeAreaView>
+  </TouchableWithoutFeedback>
   )
 }
 
@@ -50,7 +76,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#000',
     paddingTop: Constants.statusBarHeight,
-    paddingLeft: 25,
   },
   header: {
     flexDirection: 'row',
@@ -58,6 +83,7 @@ const styles = StyleSheet.create({
     paddingRight: 15,
     backgroundColor: 'black',
     width: '100%',
+    paddingLeft: 25,
   },
   logo: {
     color: '#fff',
@@ -78,8 +104,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
     paddingVertical: 15,
     marginVertical: 5,
-    marginRight: 20,
+    marginHorizontal: 20,
     borderRadius: 16,
+
 
     flexDirection: 'row',
     alignItems: 'center',
@@ -101,7 +128,25 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 14,
     fontFamily: fonts.heading
+  },
+  modalContainer: {
+    height: 250,
+    backgroundColor: 'white',
+    color: 'black',
+    borderRadius: 16,
+    padding: 25,
+  },
+
+  button: {
+    height: 50,
+    borderRadius: 10,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 300,
+    marginTop: 20
   }
+
 
 });
 

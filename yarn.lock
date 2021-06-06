@@ -5295,6 +5295,11 @@ react-native-safe-area-context@3.2.0:
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.2.0.tgz#06113c6b208f982d68ab5c3cebd199ca93db6941"
   integrity sha512-k2Nty4PwSnrg9HwrYeeE+EYqViYJoOFwEy9LxL5RIRfoqxAq/uQXNGwpUg2/u4gnKpBbEPa9eRh15KKMe/VHkA==
 
+react-native-slide-modal@0.0.32:
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/react-native-slide-modal/-/react-native-slide-modal-0.0.32.tgz#43025aa1c3f8d3dc2d1527e354886483cba5fce9"
+  integrity sha512-GxO6gNxhZ4ZmuqJNKAcJ1j1elNScsZH14P6HZNdfhGjRHUm3N6GCpLAMp+wdiKYUXMIMRB1BlhdKOVnB9il7iA==
+
 react-native-web@~0.13.12:
   version "0.13.18"
   resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.13.18.tgz#964f058a16521a3b9a31b091415edfef5b6ef305"
